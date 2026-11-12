@@ -12,6 +12,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "Better Films _ Creative Director & Filmmaker in New York_files/**",
   ]),
 ]);
 
