@@ -20,6 +20,7 @@ export type ProjectRecord = {
   deliverables: string[];
   role: string;
   video: string;
+  size?: "horizontal" | "vertical";
   directorNote: string;
   gallery: GalleryImage[];
   nextSlug?: string;
@@ -120,11 +121,12 @@ export const projects: ProjectRecord[] = [
     client: "Dune Moto",
     year: "2026",
     category: "commercials",
+    size: "vertical",
     description:
       "Um filme de lançamento para uma moto de aventura, gravado do alto enquanto um motociclista solitário cruza o deserto. Um drone acompanhou a moto sobre a areia e a trilha seca durante a hora dourada. O piloto repetiu o percurso uma dúzia de vezes até o rastro de poeira encontrar a luz.",
     deliverables: ["Direção", "Fotografia"],
     role: "Diretor Criativo",
-    video: "https://framerusercontent.com/assets/tQ7nO4dtZi52D1f9idtNl3x9Rw.mp4",
+    video: "/assets/snapinsta-1794531943180.mp4",
     directorNote:
       "A escala era toda a história. Um pequeno piloto em uma paisagem imensa diz mais sobre autonomia do que qualquer ficha técnica.",
     gallery: [images.soundstage, images.crewWarehouse, images.crewLights, images.redLight],
@@ -137,6 +139,7 @@ export const projects: ProjectRecord[] = [
     client: "Ridgeline Outfitters",
     year: "2025",
     category: "commercials",
+    size: "vertical",
     description:
       "Um filme de equipamentos para atividades ao ar livre sobre a pausa no meio de uma subida, quando os caminhantes param para descansar e conversar. Filmamos um grupo real de amigos em uma longa caminhada pela crista e mantivemos a câmera à distância. A maior parte do diálogo não foi roteirizada.",
     deliverables: ["Direção", "Fotografia"],
@@ -154,6 +157,7 @@ export const projects: ProjectRecord[] = [
     client: "Pace Running",
     year: "2024",
     category: "commercials",
+    size: "vertical",
     description:
       "Um filme de tênis de corrida que acompanha um corredor por uma passarela da cidade antes do início da rotina diária. Fechamos a ponte por vinte minutos ao amanhecer e filmamos de um carrinho em movimento ao lado dele. A montagem segue o ritmo de seus passos.",
     deliverables: ["Direção", "Fotografia"],
@@ -171,6 +175,7 @@ export const projects: ProjectRecord[] = [
     client: "Pawly",
     year: "2023",
     category: "commercials",
+    size: "vertical",
     description:
       "Um comercial de ração sobre uma garota e seu cachorro passando juntos uma tarde tranquila ao ar livre. Escolhemos uma tutora de verdade e seu cão e demos tempo para que brincassem antes de filmar. As câmeras de mão ficaram fora do caminho.",
     deliverables: ["Direção", "Fotografia"],

@@ -38,13 +38,13 @@ type FilmCardProps = {
 
 export function FilmCard({ project, priority = false }: FilmCardProps) {
   return (
-    <article className="film-card">
+    <article className={`film-card${project.size === "vertical" ? " film-card--vertical" : ""}`}>
       <Link
         href={`/projects/${project.slug}`}
         className="film-card__link"
         aria-label={`Ver ${project.title} para ${project.client}`}
       >
-        <span className="film-card__media">
+        <span className={`film-card__media${project.size === "vertical" ? " film-card__media--vertical" : ""}`}>
           <video
             src={project.video}
             autoPlay

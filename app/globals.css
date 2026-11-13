@@ -212,6 +212,7 @@ ol {
   gap: 36px 24px;
   padding-top: 0;
   padding-bottom: 116px;
+  justify-content: space-between;
 }
 
 .home-film-grid .film-card__media {
@@ -233,6 +234,14 @@ ol {
   overflow: hidden;
   aspect-ratio: 16 / 9;
   background: #130000;
+}
+
+.home-film-grid .film-card__media--vertical {
+  aspect-ratio: 4 / 7;
+}
+
+.home-film-grid .film-card--vertical {
+  width: 90%;
 }
 
 .film-card__media video {
@@ -736,6 +745,10 @@ ol {
     gap: 42px;
     padding-top: 0;
     padding-bottom: 64px;
+  }
+
+  .home-film-grid .film-card--vertical {
+    width: 100%;
   }
 
   .film-card__caption {
