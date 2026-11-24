@@ -572,8 +572,13 @@ export const projectMap = new Map(projects.map((item) => [item.slug, item]));
 export const homeProjectSlugs = categories[0].projectSlugs;
 
 export const aboutImage: GalleryImage = {
-  src: "https://framerusercontent.com/images/oF9BK1E7b9inHH9oojbU0ck4Q.png?width=1125&height=750",
-  alt: "Cineasta operando uma câmera de cinema em uma praia",
+  src: "/assets/557141091_17864825010469630_8760364571703187649_n.jpg",
+  alt: "Foto de perfil",
+};
+
+export const productionImage: GalleryImage = {
+  src: "/assets/558147735_17864825037469630_9057585180460634288_n.jpg",
+  alt: "Foto de perfil escura",
 };
 
 export function framerSrcSet(src: string) {

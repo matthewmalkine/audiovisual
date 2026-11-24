@@ -2,21 +2,13 @@ import Image from "next/image";
 
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { FilmCard, FramerImage } from "@/components/site-media";
-import { aboutImage, homeProjectSlugs, projectMap } from "@/lib/site-data";
+import { aboutImage, homeProjectSlugs, projectMap, productionImage } from "@/lib/site-data";
 import oddMksLogo from "/public/assets/Logótipo Geométrico ODD MKS.png";
 
 const homeProjects = homeProjectSlugs.flatMap((slug) => {
   const item = projectMap.get(slug);
   return item ? [item] : [];
 });
-
-const awards = [
-  ["Cannes Lions — Bronze em Film Craft", "2026"],
-  ["Ciclope Festival — Melhor Fotografia", "2025"],
-  ["Vimeo Staff Pick", "2025"],
-  ["Berlin Commercial — Melhor Direção", "2024"],
-  ["UK Music Video Awards — Indicado", "2023"],
-];
 
 export default function Home() {
   return (
@@ -52,7 +44,7 @@ export default function Home() {
       <section className="home-about content-wrap" aria-labelledby="about-title">
         <div className="home-about__label">
           <p id="about-title" className="micro-label">
-            Sobre
+            Sobre Nós
           </p>
         </div>
 
@@ -63,22 +55,40 @@ export default function Home() {
             quando a tela escurece.
           </p>
 
-          <div className="awards" aria-labelledby="awards-title">
-            <p id="awards-title" className="micro-label">
-              Prêmios
-            </p>
-            <ul>
-              {awards.map(([name, recognition]) => (
-                <li key={name}>
-                  <span>{name}</span>
-                  <span>{recognition}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="home-about__team" aria-label="Integrantes da ODD MKS">
+            <article className="home-about__member">
+              <div className="home-about__portrait">
+                <FramerImage {...aboutImage} sizes="(max-width: 809px) 100vw, 34vw" />
+              </div>
 
-          <div className="home-about__image">
-            <FramerImage {...aboutImage} sizes="(max-width: 809px) 100vw, 68vw" />
+              <div className="home-about__member-content">
+                <p className="home-about__member-index micro-label">01 — Filmaker &amp; Fotografia</p>
+                <h3>Dudu</h3>
+                <p className="home-about__member-role">Direção criativa &amp; fotografia</p>
+                <p className="home-about__member-copy">
+                  3 Anos de experiência. <br></br>Especialista em
+                  institucionais e corporativas
+                </p>
+              </div>
+            </article>
+
+            <article className="home-about__member home-about__member--reverse">
+              <div className="home-about__portrait">
+                <FramerImage {...productionImage} sizes="(max-width: 809px) 100vw, 34vw" />
+              </div>
+
+              <div className="home-about__member-content">
+                <p className="home-about__member-index micro-label">
+                  02 — Fotografia
+                </p>
+                <h3>Gui</h3>
+                <p className="home-about__member-role">Fotografia &amp; luzes</p>
+                <p className="home-about__member-copy">
+                  Fotográfo há 3 anos e meio.<br></br>
+                  Mestre em luz e cor
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>

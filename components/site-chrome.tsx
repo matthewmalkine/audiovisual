@@ -43,7 +43,7 @@ export function SiteFooter() {
           Disponível para novos projetos
         </p>
         <a className="footer-email" href="mailto:hi@betterfilms.com">
-          hi@betterfilms.com
+          
         </a>
       </section>
 
@@ -68,7 +68,7 @@ export function SiteFooter() {
       <div className="footer-bottom micro-label">
         <span>© 2026 Todos os direitos reservados.</span>
         <a className="link-line" href="https://instagram.com" target="_blank" rel="noreferrer">
-          @betterfilms
+          @oddmks
         </a>
       </div>
     </footer>
