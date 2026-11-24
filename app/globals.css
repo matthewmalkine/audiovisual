@@ -211,12 +211,18 @@ ol {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 36px 24px;
   padding-top: 0;
-  padding-bottom: 116px;
+  padding-bottom: 72px;
   justify-content: space-between;
 }
 
 .home-film-grid .film-card__media {
   aspect-ratio: 5 / 3;
+}
+
+.home-vertical-film-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding-bottom: 116px;
 }
 
 .film-card,
@@ -236,12 +242,13 @@ ol {
   background: #130000;
 }
 
-.home-film-grid .film-card__media--vertical {
-  aspect-ratio: 4 / 7;
+.home-vertical-film-grid .film-card__media--vertical {
+  aspect-ratio: 4 / 6;
 }
 
-.home-film-grid .film-card--vertical {
-  width: 90%;
+.home-vertical-film-grid .film-card--vertical {
+  width: min(100%, 480px);
+  justify-self: center;
 }
 
 .film-card__media video {
@@ -746,6 +753,11 @@ ol {
 @media (min-width: 810px) and (max-width: 1199.98px) {
   .home-film-grid {
     gap: 36px 16px;
+    padding-bottom: 60px;
+  }
+
+  .home-vertical-film-grid {
+    gap: 16px;
     padding-bottom: 100px;
   }
 
@@ -825,10 +837,16 @@ ol {
     grid-template-columns: 1fr;
     gap: 42px;
     padding-top: 0;
+    padding-bottom: 42px;
+  }
+
+  .home-vertical-film-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
     padding-bottom: 64px;
   }
 
-  .home-film-grid .film-card--vertical {
+  .home-vertical-film-grid .film-card--vertical {
     width: 100%;
   }
 

@@ -10,6 +10,11 @@ const homeProjects = homeProjectSlugs.flatMap((slug) => {
   return item ? [item] : [];
 });
 
+const horizontalHomeProjects = homeProjects.filter((project) => project.size !== "vertical");
+const verticalHomeProjects = homeProjects
+  .filter((project) => project.size === "vertical")
+  .slice(0, 3);
+
 export default function Home() {
   return (
     <main className="home-page">
@@ -36,8 +41,14 @@ export default function Home() {
       </section>
 
       <section className="film-grid home-film-grid content-wrap" aria-label="Filmes selecionados">
-        {homeProjects.map((project, index) => (
+        {horizontalHomeProjects.map((project, index) => (
           <FilmCard project={project} priority={index < 2} key={project.slug} />
+        ))}
+      </section>
+
+      <section className="film-grid home-vertical-film-grid content-wrap" aria-label="Filmes verticais">
+        {verticalHomeProjects.map((project) => (
+          <FilmCard project={project} key={project.slug} />
         ))}
       </section>
 
